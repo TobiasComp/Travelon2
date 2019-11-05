@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Travelon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="travelon.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="app">
+        <div class="box1">
+            <div class=" box table-destinations">
+                <h4>Places to Go!!</h4>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Destination</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="box form-order">
+                <h4>Book a Flight!!</h4>
+                <label for="new-order-name"> name:   </label>
+                <input type="text" id="new-order-name"><br><br>
+                <label for="new-order-pid">id:</label>
+                <input type="text"id="new-order-pid"><br><br>
+                <label for="new-order-code">travel code</label>
+                <input type="text"id="new-order-code"><br><br>
+                <label for="new-order-num-passengers">num passengers: </label>
+                <input type="text"id="new-order-num-passengers"><br><br>
+                <button onclick="addOrder()">send</button>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="box table-orders">
+                <h4>Existing Orders</h4>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Total</th>
+                            <th>Passengers</th>
+                            <th>Destination</th>
+                            <th>Personal ID</th>
+                            <th>Name</th>
+                            <th>Order-Number</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="box find-orders">
+                    <h4>Search</h4>
+                    <label for="find-order-name">name: </label>
+                    <input type="text" id="find-order-name">
+                    <button onclick="findOrder(this)">find</button><br><br>
+            
+                <div class=" find-order-table">
+                    <table border="1">
+                            <thead>
+                                <tr>
+                                    <th>Total</th>
+                                    <th>Passengers</th>
+                                    <th>Destination</th>
+                                    <th>Personal ID</th>
+                                    <th>Name</th>
+                                    <th>Order-Number</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="box find-orders-destination">
+            <h4>Order Lookup</h4>
+            <select id="order-lookup">
+                <option value="Thailand">Thailand</option>
+                <option value="China">China</option>
+                <option value="Usa">Usa</option>
+                <option value="Canada">Canada</option>
+                <option value="Paris">Paris</option>
+                <option value="London">London</option>
+                <option value="Peru">Peru</option>
+                <option value="Sydney">Sydney</option>
+            </select>
+            <button onclick="findOrdersByDestination()">Find</button>
+            <br><br>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Total</th>
+                        <th>Passengers</th>
+                        <th>Destination</th>
+                        <th>Personal ID</th>
+                        <th>Name</th>
+                        <th>Order-Number</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+        </div>
+    </div>
+    
+    <script src="renderForTravel.js"></script>
+
+    <script src="travelon.js"></script>
+
+
+</body>
+</html>
