@@ -24,7 +24,7 @@
     width: 400px;
     border: 2px dashed blue;
     /* display: inline-block; */
-    background-color: yellow;
+    background-color: rgb(111, 103, 221);
     padding: 50px;
     margin-top: 50px;
 }

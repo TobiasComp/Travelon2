@@ -26,7 +26,6 @@ function displayDestinations(){
     try {
         console.log("The js file has started...");
         let tableDestination = document.querySelector('.table-destinations tbody');
-        tableDestination.innerHTML="";
         let templateDest = "<tr><td>{{dest_code}}</td><td>{{dest_name}}</td><td>{{dest_price}}</td></tr>"
         
         tableDestination.innerHTML =  renderEngine(templateDest,destinations).body;  
@@ -44,7 +43,7 @@ function displayOrders(){
         console.log("display order start");
         let tableOrder = document.querySelector('.table-orders tbody');
         
-        let templateOrder = "<tr><td>{{total}}</td><td>{{passengers}}</td><td>{{destinations}}</td>" +
+        let templateOrder = "<tr><td>{{total}}</td><td>{{passengers}}</td><td>{{destination}}</td>" +
                             "<td>{{pid}}</td><td>{{name}}</td><td>{{number}}</td></tr>";
        
         tableOrder.innerHTML =  renderEngine(templateOrder,orders).body;  
